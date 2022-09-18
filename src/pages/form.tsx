@@ -18,7 +18,7 @@ const Form = () => {
         style={{ backgroundImage: `url("/photo.webp")` }}
       >
         <div className='hero-overlay bg-opacity-60' />
-        <div className='my-10 flex w-[300px] flex-col gap-6 rounded-xl bg-base-300 p-6 shadow-md md:w-[600px] md:p-10'>
+        <div className='my-10 flex w-11/12 flex-col gap-6 rounded-xl bg-base-300 p-6 shadow-md md:w-[600px] md:p-10'>
           <h1 className='text-3xl'>Регистрация</h1>
           <form className='flex flex-col gap-5'>
             <div className='flex flex-col gap-4 md:flex-row'>

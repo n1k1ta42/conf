@@ -21,10 +21,6 @@ class MyDocument extends Document {
     return (
       <Html lang='ru'>
         <Head>
-          <meta
-            name='viewport'
-            content='width=device-width, initial-scale=1.0'
-          />
           <meta name='description' content='IT-конференция на Ямале' />
           <meta property='og:url' content='https://conf.yamal.dev' />
           <meta property='og:title' content='YAMAL.DEV CONF' />
