@@ -1,8 +1,6 @@
 import { PrismaClient } from '@prisma/client'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-import { User } from '@/domain/User'
-
 const prisma = new PrismaClient()
 
 export default async function handler(
@@ -11,7 +9,7 @@ export default async function handler(
 ) {
   if (req.method === 'POST') {
     await prisma.$connect()
-    const data: User = req.body
+    const data = req.body
     const user = await prisma.user.findFirst({
       where: {
         phone: data.phone,
