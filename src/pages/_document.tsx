@@ -34,6 +34,7 @@ class MyDocument extends Document {
             property='og:image'
             content='https://conf.yamal.dev/og-image.svg'
           />
+          <meta name='robots' content='all' />
           <link rel='canonical' href='https://conf.yamal.dev' />
           <link rel='icon' href='/favicon/favicon.ico' sizes='any' />
           <link rel='icon' href='/favicon/favicon-32x32.png' />
