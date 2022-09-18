@@ -1,23 +1,36 @@
+import axios from 'axios'
 import clsx from 'clsx'
 import Head from 'next/head'
 import { useState } from 'react'
 import { Controller, SubmitHandler, useForm } from 'react-hook-form'
+import toast from 'react-hot-toast'
 import PhoneInput from 'react-phone-input-2'
 
 import { User } from '@/domain/User'
 
 const Form = () => {
   const [privacy, setPrivacy] = useState<boolean>(true)
+  const [isLoading, setIsLoading] = useState(false)
   const {
     register,
     handleSubmit,
     control,
     watch,
+    reset,
     formState: { errors },
   } = useForm<User>({})
 
-  const onSubmit: SubmitHandler<User> = data => {
-    console.log(data)
+  const onSubmit: SubmitHandler<User> = async data => {
+    setIsLoading(true)
+    try {
+      const res = await axios.post('/api/register', data)
+      toast.success(res.data.message)
+      reset()
+    } catch (e: any) {
+      toast.error(e.response.data.message)
+    }
+
+    setIsLoading(false)
   }
 
   return (
@@ -40,6 +53,7 @@ const Form = () => {
             <div className='flex flex-col gap-4 md:flex-row'>
               <div className='flex w-full flex-col gap-2'>
                 <input
+                  disabled={isLoading}
                   className={clsx('input w-full', errors.name && 'input-error')}
                   placeholder='Имя'
                   {...register('name', {
@@ -62,6 +76,7 @@ const Form = () => {
               </div>
               <div className='flex w-full flex-col gap-2'>
                 <input
+                  disabled={isLoading}
                   className={clsx(
                     'input w-full',
                     errors.surname && 'input-error',
@@ -94,6 +109,7 @@ const Form = () => {
                 // @ts-ignore
                 render={({ field }) => (
                   <PhoneInput
+                    disabled={isLoading}
                     country='ru'
                     inputClass={clsx(
                       'input w-full',
@@ -113,6 +129,7 @@ const Form = () => {
             </div>
             <div className='flex w-full flex-col gap-2'>
               <input
+                disabled={isLoading}
                 className={clsx('input w-full', errors.email && 'input-error')}
                 placeholder='Email'
                 type='email'
@@ -134,6 +151,7 @@ const Form = () => {
             <div className='grid grid-cols-1 gap-4 md:grid-cols-2'>
               <label className='flex cursor-pointer items-center gap-4'>
                 <input
+                  disabled={isLoading}
                   type='checkbox'
                   className='checkbox-secondary checkbox'
                   {...register('isStudent')}
@@ -143,6 +161,7 @@ const Form = () => {
 
               <label className='flex cursor-pointer items-center gap-4'>
                 <input
+                  disabled={isLoading}
                   type='checkbox'
                   className='checkbox-secondary checkbox'
                   {...register('isItWorker')}
@@ -152,6 +171,7 @@ const Form = () => {
 
               <label className='flex cursor-pointer items-center gap-4'>
                 <input
+                  disabled={isLoading}
                   type='checkbox'
                   className='checkbox-secondary checkbox'
                   {...register('isNotItWorker')}
@@ -165,16 +185,19 @@ const Form = () => {
             {watch('isItWorker') && (
               <>
                 <textarea
+                  disabled={isLoading}
                   className='textarea'
                   placeholder='Кем вы работаете?'
                   {...register('position')}
                 />
                 <textarea
+                  disabled={isLoading}
                   className='textarea'
                   placeholder='В какой компании вы работаете?'
                   {...register('company')}
                 />
                 <textarea
+                  disabled={isLoading}
                   className='textarea'
                   placeholder='Какой стек технологий вы используете?'
                   {...register('stack')}
@@ -185,6 +208,7 @@ const Form = () => {
             {watch('isNotItWorker') && (
               <>
                 <textarea
+                  disabled={isLoading}
                   className='textarea'
                   placeholder='В какой сфере вы работаете?'
                   {...register('sphere')}
@@ -196,6 +220,7 @@ const Form = () => {
 
             <div className='flex gap-4'>
               <input
+                disabled={isLoading}
                 type='checkbox'
                 className='checkbox-secondary checkbox'
                 checked={privacy}
@@ -219,7 +244,10 @@ const Form = () => {
                 конференции
               </p>
             </div>
-            <button className='btn-secondary btn' disabled={!privacy}>
+            <button
+              className='btn-secondary btn'
+              disabled={!privacy || isLoading}
+            >
               Зарегистрироваться
             </button>
           </form>
