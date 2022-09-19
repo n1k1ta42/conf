@@ -50,7 +50,7 @@ const Home: NextPage = () => {
           </a>
           <div className='order-1 lg:order-2'>
             <h1 className='text-xl font-bold lg:text-5xl'>
-              Арт-резеденция Полярис
+              Арт-резеденция &quot;Полярис&quot;
             </h1>
             <p className='flex gap-1 py-6'>
               <svg
@@ -72,8 +72,7 @@ const Home: NextPage = () => {
                   d='M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z'
                 />
               </svg>
-              Адрес: г. Салехард, ул. Чубынина 17, АРТ-резиденция
-              &quot;Полярис&quot;
+              Адрес: г. Салехард, ул. Чубынина 17
             </p>
             <a
               className='link-hover link'
