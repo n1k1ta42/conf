@@ -9,7 +9,6 @@ import PhoneInput from 'react-phone-input-2'
 import { User } from '@/domain/User'
 
 const Form = () => {
-  const [privacy, setPrivacy] = useState<boolean>(true)
   const [isLoading, setIsLoading] = useState(false)
   const {
     register,
@@ -18,7 +17,11 @@ const Form = () => {
     watch,
     reset,
     formState: { errors },
-  } = useForm<User>({})
+  } = useForm<User>({
+    defaultValues: {
+      isFamiliar: true,
+    },
+  })
 
   const onSubmit: SubmitHandler<User> = async data => {
     setIsLoading(true)
@@ -39,7 +42,7 @@ const Form = () => {
         <title>YAMAL.DEV CONF / Регистрация</title>
       </Head>
       <div
-        className='hero min-h-screen'
+        className='hero min-h-screen pt-[75px]'
         style={{ backgroundImage: `url("/photo.webp")` }}
       >
         <div className='hero-overlay bg-opacity-60' />
@@ -152,9 +155,10 @@ const Form = () => {
               <label className='flex cursor-pointer items-center gap-4'>
                 <input
                   disabled={isLoading}
-                  type='checkbox'
-                  className='checkbox-secondary checkbox'
-                  {...register('isStudent')}
+                  type='radio'
+                  value='student'
+                  className='radio-secondary radio'
+                  {...register('role')}
                 />
                 <span className='label-text'>Студент</span>
               </label>
@@ -162,9 +166,10 @@ const Form = () => {
               <label className='flex cursor-pointer items-center gap-4'>
                 <input
                   disabled={isLoading}
-                  type='checkbox'
-                  className='checkbox-secondary checkbox'
-                  {...register('isItWorker')}
+                  type='radio'
+                  value='worker'
+                  className='radio-secondary radio'
+                  {...register('role')}
                 />
                 <span className='label-text'>Работаю в it</span>
               </label>
@@ -172,17 +177,18 @@ const Form = () => {
               <label className='flex cursor-pointer items-center gap-4'>
                 <input
                   disabled={isLoading}
-                  type='checkbox'
-                  className='checkbox-secondary checkbox'
-                  {...register('isNotItWorker')}
+                  type='radio'
+                  value='other'
+                  className='radio-secondary radio'
+                  {...register('role')}
                 />
                 <span className='label-text'>Работаю не в it</span>
               </label>
             </div>
 
-            {watch('isStudent') && <></>}
+            {watch('role') === 'student' && <></>}
 
-            {watch('isItWorker') && (
+            {watch('role') === 'worker' && (
               <>
                 <textarea
                   disabled={isLoading}
@@ -205,7 +211,7 @@ const Form = () => {
               </>
             )}
 
-            {watch('isNotItWorker') && (
+            {watch('role') === 'other' && (
               <>
                 <textarea
                   disabled={isLoading}
@@ -223,8 +229,7 @@ const Form = () => {
                 disabled={isLoading}
                 type='checkbox'
                 className='checkbox-secondary checkbox'
-                checked={privacy}
-                onChange={() => setPrivacy(!privacy)}
+                {...register('isFamiliar')}
               />
               <p className='text-xs'>
                 Я согласен на{' '}
@@ -245,8 +250,8 @@ const Form = () => {
               </p>
             </div>
             <button
-              className='btn-secondary btn'
-              disabled={!privacy || isLoading}
+              className={clsx('btn-secondary btn', isLoading && 'loading')}
+              disabled={!watch('isFamiliar') || isLoading}
             >
               Зарегистрироваться
             </button>

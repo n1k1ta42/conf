@@ -3,14 +3,14 @@ export const RegulationsModal = () => {
     <>
       <input type='checkbox' id='regulations' className='modal-toggle' />
       <div className='modal'>
-        <div className='modal-box relative w-11/12 max-w-5xl'>
+        <div className='modal-box relative max-w-2xl bg-neutral'>
           <label
             htmlFor='regulations'
             className='btn-sm btn-circle btn absolute right-2 top-2'
           >
             ✕
           </label>
-          <article className='prose-xl'>
+          <article className='prose'>
             <h1>Регламент</h1>
             <p>
               Конференция YAMAL.DEV CONF создана как место, где участники могут

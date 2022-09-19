@@ -38,7 +38,7 @@ class MyDocument extends Document {
           <link rel='apple-touch-icon' href='/favicon/apple-touch-icon.png' />
           <link rel='manifest' href='/favicon/site.webmanifest' />
         </Head>
-        <body>
+        <body className='relative'>
           <Main />
           <NextScript />
           <PrivacyModal />

@@ -32,7 +32,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className='hero min-h-screen bg-base-200'>
+      <div className='hero min-h-screen bg-base-300'>
         <div className='hero-content flex-col gap-20 lg:flex-row'>
           <a
             href='https://vk.com/polaris_artresidence'
@@ -134,7 +134,7 @@ const Home: NextPage = () => {
         </p>
       </div>
 
-      <footer className='footer footer-center bg-base-200 p-10'>
+      <footer className='footer footer-center bg-base-300 p-10'>
         <div>
           <p className='font-bold'>YAMAL.DEV</p>
           <p>Copyright © 2022 - All right reserved</p>

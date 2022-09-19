@@ -16,9 +16,8 @@ model User {
   surname       String
   email         String
   phone         String
-  isStudent     Boolean
-  isItWorker    Boolean
-  isNotItWorker Boolean
+  isFamiliar    Boolean
+  role          String?
   position      String?
   company       String?
   stack         String?

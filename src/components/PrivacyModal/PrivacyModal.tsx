@@ -3,14 +3,14 @@ export const PrivacyModal = () => {
     <>
       <input type='checkbox' id='privacy' className='modal-toggle' />
       <div className='modal'>
-        <div className='modal-box relative w-11/12 max-w-5xl '>
+        <div className='modal-box relative max-w-2xl bg-neutral '>
           <label
             htmlFor='privacy'
             className='btn-sm btn-circle btn absolute right-2 top-2'
           >
             ✕
           </label>
-          <article className='prose-xl'>
+          <article className='prose'>
             <h1>Политика</h1>
             <p>
               1. Общие положения Настоящая политика обработки персональных
