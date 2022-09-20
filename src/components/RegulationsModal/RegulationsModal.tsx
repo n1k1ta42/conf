@@ -3,7 +3,7 @@ export const RegulationsModal = () => {
     <>
       <input type='checkbox' id='regulations' className='modal-toggle' />
       <div className='modal'>
-        <div className='modal-box relative max-w-2xl bg-neutral'>
+        <div className='modal-box relative h-[750px] max-w-2xl bg-neutral'>
           <label
             htmlFor='regulations'
             className='btn-sm btn-circle btn absolute right-2 top-2'
