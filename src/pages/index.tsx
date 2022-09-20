@@ -1,9 +1,31 @@
+import { motion } from 'framer-motion'
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
+import { useState } from 'react'
+
+const hiddenMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 30px, rgba(0,0,0,1) 30px, rgba(0,0,0,1) 30px)`
+const visibleMask = `repeating-linear-gradient(to right, rgba(0,0,0,0) 0px, rgba(0,0,0,0) 0px, rgba(0,0,0,1) 0px, rgba(0,0,0,1) 30px)`
+
+const themes = [
+  'Frontend',
+  'Backend',
+  'data science',
+  'Product design',
+  'Менеджмент',
+  'Agile',
+  'Образование',
+  'HR',
+  'Game dev',
+  'Devops',
+  'Machine learning',
+  'Воркшопы',
+]
 
 const Home: NextPage = () => {
   const router = useRouter()
+  const [isLoaded, setIsLoaded] = useState(false)
+  const [isInView, setIsInView] = useState(false)
 
   return (
     <>
@@ -14,31 +36,117 @@ const Home: NextPage = () => {
         <div className='hero-overlay bg-base-300/60'></div>
         <div className='hero-content text-center text-neutral-content'>
           <div className='max-w-full'>
-            <h1 className='mb-5 text-[48px] font-bold text-white md:text-[84px]'>
+            <motion.h1
+              initial='offscreen'
+              whileInView='onscreen'
+              viewport={{ once: true }}
+              variants={{
+                offscreen: {
+                  y: 300,
+                  opacity: 0,
+                },
+                onscreen: {
+                  y: 0,
+                  opacity: 1,
+                  transition: {
+                    type: 'spring',
+                    bounce: 0.4,
+                    duration: 0.8,
+                    delay: 0,
+                  },
+                },
+              }}
+              className='mb-5 text-[48px] font-bold text-white md:text-[84px]'
+            >
               YAMAl.DEV CONF
-            </h1>
-            <p className='mb-5 text-[24px] font-bold md:text-[42px]'>
+            </motion.h1>
+            <motion.p
+              initial='offscreen'
+              whileInView='onscreen'
+              viewport={{ once: true }}
+              variants={{
+                offscreen: {
+                  y: 300,
+                  opacity: 0,
+                },
+                onscreen: {
+                  y: 0,
+                  opacity: 1,
+                  transition: {
+                    type: 'spring',
+                    bounce: 0.4,
+                    duration: 0.8,
+                    delay: 0.1,
+                  },
+                },
+              }}
+              className='mb-5 text-[24px] font-bold md:text-[42px]'
+            >
               IT конференция на Ямале
-            </p>
-            <p className='mb-5 text-[14px] md:text-[21px]'>
+            </motion.p>
+            <motion.p
+              initial='offscreen'
+              whileInView='onscreen'
+              viewport={{ once: true }}
+              variants={{
+                offscreen: {
+                  y: 300,
+                  opacity: 0,
+                },
+                onscreen: {
+                  y: 0,
+                  opacity: 1,
+                  transition: {
+                    type: 'spring',
+                    bounce: 0.4,
+                    duration: 0.8,
+                    delay: 0.2,
+                  },
+                },
+              }}
+              className='mb-5 text-[14px] md:text-[21px]'
+            >
               online-offline 5-6 ноября
-            </p>
-            <button
+            </motion.p>
+            <motion.button
+              initial='offscreen'
+              whileInView='onscreen'
+              viewport={{ once: true }}
+              variants={{
+                offscreen: {
+                  opacity: 0,
+                },
+                onscreen: {
+                  opacity: 1,
+                  transition: {
+                    delay: 0.3,
+                  },
+                },
+              }}
               className='btn-secondary btn'
               onClick={() => router.push('/form')}
             >
               Регистрация
-            </button>
+            </motion.button>
           </div>
         </div>
       </div>
       <div className='hero min-h-screen bg-base-300'>
         <div className='hero-content flex-col gap-20 lg:flex-row'>
-          <a
+          <motion.a
             href='https://vk.com/polaris_artresidence'
             target='_blank'
             rel='noreferrer'
             className='order-2 lg:order-1'
+            initial={false}
+            animate={
+              isLoaded && isInView
+                ? { WebkitMaskImage: visibleMask, maskImage: visibleMask }
+                : { WebkitMaskImage: hiddenMask, maskImage: hiddenMask }
+            }
+            transition={{ duration: 1 }}
+            viewport={{ once: true, amount: 0.8 }}
+            onViewportEnter={() => setIsInView(true)}
           >
             <Image
               src='/polaris.webp'
@@ -46,9 +154,31 @@ const Home: NextPage = () => {
               width={280}
               height={351}
               className='max-w-sm rounded-lg shadow-2xl'
+              onLoad={() => setIsLoaded(true)}
             />
-          </a>
-          <div className='order-1 lg:order-2'>
+          </motion.a>
+          <motion.div
+            initial='offscreen'
+            whileInView='onscreen'
+            viewport={{ once: true, amount: 0.8 }}
+            variants={{
+              offscreen: {
+                x: 300,
+                opacity: 0,
+              },
+              onscreen: {
+                x: 0,
+                opacity: 1,
+                transition: {
+                  type: 'spring',
+                  bounce: 0.4,
+                  duration: 0.8,
+                  delay: 0.3,
+                },
+              },
+            }}
+            className='order-1 lg:order-2'
+          >
             <h1 className='text-xl font-bold lg:text-5xl'>
               Арт-резеденция &quot;Полярис&quot;
             </h1>
@@ -82,7 +212,7 @@ const Home: NextPage = () => {
             >
               66.529707, 66.613675
             </a>
-          </div>
+          </motion.div>
         </div>
       </div>
 
@@ -90,47 +220,51 @@ const Home: NextPage = () => {
         <h2 className='text-2xl text-white lg:text-5xl'>
           Программа конференции
         </h2>
-        <div className='grid grid-cols-1 gap-4 lg:grid-cols-2 '>
-          <div className='flex w-[300px]  items-center justify-center rounded-xl p-5 shadow transition-all hover:shadow-none'>
-            Frontend
-          </div>
-          <div className='flex w-[300px]  items-center justify-center rounded-xl p-5 shadow transition-all hover:shadow-none'>
-            Backend
-          </div>
-          <div className='flex w-[300px]  items-center justify-center rounded-xl p-5 shadow transition-all hover:shadow-none'>
-            data science
-          </div>
-          <div className='flex w-[300px]  items-center justify-center rounded-xl p-5 shadow transition-all hover:shadow-none'>
-            Product design
-          </div>
-          <div className='flex w-[300px]  items-center justify-center rounded-xl p-5 shadow transition-all hover:shadow-none'>
-            Менеджмент
-          </div>
-          <div className='flex w-[300px]  items-center justify-center rounded-xl p-5 shadow transition-all hover:shadow-none'>
-            Agile
-          </div>
-          <div className='flex w-[300px]  items-center justify-center rounded-xl p-5 shadow transition-all hover:shadow-none'>
-            Образование
-          </div>
-          <div className='flex w-[300px]  items-center justify-center rounded-xl p-5 shadow transition-all hover:shadow-none'>
-            HR
-          </div>
-          <div className='flex w-[300px]  items-center justify-center rounded-xl p-5 shadow transition-all hover:shadow-none'>
-            Game dev
-          </div>
-          <div className='flex w-[300px]  items-center justify-center rounded-xl p-5 shadow transition-all hover:shadow-none'>
-            Devops
-          </div>
-          <div className='flex w-[300px]  items-center justify-center rounded-xl p-5 shadow transition-all hover:shadow-none'>
-            Machine learning
-          </div>
-          <div className='flex w-[300px]  items-center justify-center rounded-xl p-5 shadow transition-all hover:shadow-none'>
-            Воркшопы
-          </div>
+        <div className='grid grid-cols-1 gap-4 lg:grid-cols-2'>
+          {themes.map((theme, index) => (
+            <motion.div
+              key={theme}
+              initial='offscreen'
+              whileInView='onscreen'
+              viewport={{ once: true }}
+              variants={{
+                offscreen: {
+                  opacity: 0,
+                },
+                onscreen: {
+                  opacity: 1,
+                  transition: {
+                    delay: index / 10,
+                  },
+                },
+              }}
+              className='flex w-[300px]  items-center justify-center rounded-xl p-5 shadow transition-all hover:shadow-none'
+            >
+              {theme}
+            </motion.div>
+          ))}
         </div>
-        <p className='text-center text-lg text-white lg:text-2xl'>
+        <motion.p
+          initial='offscreen'
+          whileInView='onscreen'
+          viewport={{ once: true }}
+          variants={{
+            offscreen: {
+              y: 300,
+              opacity: 0,
+            },
+            onscreen: {
+              y: 0,
+              opacity: 1,
+              transition: {
+                delay: themes.length / 7.5,
+              },
+            },
+          }}
+          className='text-center text-lg text-white lg:text-2xl'
+        >
           Анонс программы 4 октября
-        </p>
+        </motion.p>
       </div>
 
       <footer className='footer footer-center bg-base-300 p-10'>
