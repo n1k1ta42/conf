@@ -7,8 +7,6 @@ export const Header = () => {
   return (
     <header className='absolute inset-x-0 top-0 flex h-[75px] justify-center bg-base-300 px-2 shadow-2xl'>
       <div className='relative flex w-[752px] items-center'>
-        <div className='text-2xl'>YAMAL.DEV</div>
-
         <div className='absolute left-1/2 hidden -translate-x-1/2 gap-10 md:flex'>
           <Link href='/'>
             <a className='link-hover'>Главная</a>
