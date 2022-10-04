@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 import { useRouter } from 'next/router'
 
 import useMediaQuery from '@/utils/useMediaQuery'
@@ -38,15 +39,15 @@ export const Hero = () => {
               }}
               className='mb-5 text-[48px] font-bold text-white md:text-[84px]'
             >
-              YAMAl.DEV CONF
+              IT Weekend на Ямале
             </motion.h1>
           ) : (
             <h1 className='mb-5 text-[48px] font-bold text-white md:text-[84px]'>
-              YAMAl.DEV CONF
+              IT Weekend на Ямале
             </h1>
           )}
           {isDesktop ? (
-            <motion.p
+            <motion.div
               initial='offscreen'
               whileInView='onscreen'
               viewport={{ once: true }}
@@ -66,14 +67,28 @@ export const Hero = () => {
                   },
                 },
               }}
-              className='mb-5 text-[24px] font-bold md:text-[42px]'
+              className='mb-5 flex flex-col items-center justify-center gap-5 text-[24px] text-white md:flex-row md:items-start'
             >
-              IT конференция на Ямале
-            </motion.p>
+              <Image
+                width={175}
+                height={38}
+                src='/ЯмолодIT.svg'
+                alt='ЯмолоддIT'
+              />
+              <div className='hidden text-[36px] md:block'>X</div>
+              <div className='text-[36px] font-bold'>YAMAL.DEV</div>
+            </motion.div>
           ) : (
-            <p className='mb-5 text-[24px] font-bold md:text-[42px]'>
-              IT конференция на Ямале
-            </p>
+            <div className='mb-5 flex flex-col items-center justify-center gap-5 text-[24px] text-white md:flex-row md:items-start'>
+              <Image
+                width={175}
+                height={38}
+                src='/ЯмолодIT.svg'
+                alt='ЯмолоддIT'
+              />
+              <div className='hidden text-[36px] md:block'>X</div>
+              <div className='text-[36px] font-bold'>YAMAL.DEV</div>
+            </div>
           )}
           {isDesktop ? (
             <motion.p
