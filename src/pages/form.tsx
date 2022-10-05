@@ -186,7 +186,24 @@ const Form = () => {
               </label>
             </div>
 
-            {watch('role') === 'student' && <></>}
+            {watch('role') === 'student' && (
+              <>
+                <>
+                  <textarea
+                    disabled={isLoading}
+                    className='textarea'
+                    placeholder='Где вы учитесь?'
+                    {...register('university')}
+                  />
+                  <textarea
+                    disabled={isLoading}
+                    className='textarea'
+                    placeholder='Какая у вас специальность?'
+                    {...register('specialization')}
+                  />
+                </>
+              </>
+            )}
 
             {watch('role') === 'worker' && (
               <>

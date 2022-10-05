@@ -9,4 +9,6 @@ export interface User {
   company?: string
   stack?: string
   sphere?: string
+  university?: string
+  specialization?: string
 }
