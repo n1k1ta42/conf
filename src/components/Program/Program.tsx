@@ -32,7 +32,7 @@ const program = [
   {
     id: 2,
     name: 'Александр Смирнов',
-    position: 'SCRUM-мастер, СИБУР Digital',
+    position: 'SCRUM-мастер, СИБУР ДИДЖИТАЛ',
     presentationType: 'доклад',
     presentationName:
       'Что такое продуктовый подход на практике и  как он помогает в командной разработке',
@@ -128,7 +128,7 @@ const program = [
   {
     id: 12,
     name: 'Татьяна Еремина',
-    position: 'Центр экспертизы развития IT специалиста, Сибур диджитал',
+    position: 'Центр экспертизы развития IT специалиста, СИБУР ДИДЖИТАЛ',
     presentationType: 'воркшоп',
     presentationName: 'Создаём свой центр обучения ИТ срециалистов',
     photo: '/татьяна_еремина.webp',
@@ -139,7 +139,7 @@ const program = [
   {
     id: 8,
     name: 'Анна Ширяева',
-    position: 'Фронтенд-разработчик, живущий жизнью человек, Сибур диджитал',
+    position: 'Фронтенд-разработчик, живущий жизнью человек, СИБУР ДИДЖИТАЛ',
     presentationType: 'доклад',
     presentationName:
       'Зачем мы опустились так низко? И нужен ли компаниям свой low-code?',
@@ -161,7 +161,7 @@ const program = [
   {
     id: 7,
     name: 'Павел Соколов',
-    position: 'Продуктовый дизайнер, Сибур диджитал',
+    position: 'Продуктовый дизайнер, СИБУР ДИДЖИТАЛ',
     presentationType: 'доклад',
     presentationName: 'Рабочие процессы продуктового дизайнера',
     photo: '/павел_соколов.webp',
@@ -190,7 +190,7 @@ const program = [
   {
     id: 12,
     name: 'Татьяна Еремина',
-    position: 'Центр экспертизы развития IT специалиста, Сибур диджитал',
+    position: 'Центр экспертизы развития IT специалиста, СИБУР ДИДЖИТАЛ',
     presentationType: 'доклад',
     presentationName: 'Как мы развиваем Айтишников',
     photo: '/татьяна_еремина.webp',
@@ -214,7 +214,7 @@ const program = [
   {
     id: 3,
     name: 'Александр Смирнов',
-    position: 'SCRUM-мастер, СИБУР Digital',
+    position: 'SCRUM-мастер, СИБУР ДИДЖИТАЛ',
     presentationType: 'воркшоп',
     presentationName: 'Оценка задач в Story Points',
     photo: '/александр_смирнов.webp',
