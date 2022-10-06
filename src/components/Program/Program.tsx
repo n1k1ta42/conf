@@ -10,6 +10,7 @@ import { LinkedinIcon } from '@/components/Program/LinkedinIcon'
 import { MailIcon } from '@/components/Program/MailIcon'
 import { TelegramIcon } from '@/components/Program/TelegramIcon'
 import { TwitterIcon } from '@/components/Program/TwitterIcon'
+import { VkIcon } from '@/components/Program/VkIcon'
 
 const program = [
   {
@@ -107,6 +108,35 @@ const program = [
     ],
   },
   {
+    id: 11,
+    name: 'Александра Прокшина',
+    position: 'Руководитель разработки, ARTW',
+    presentationType: 'доклад',
+    presentationName:
+      'Выход из замкнутого круга - как bitrix-разработчику перейти на программирование на фреймворках',
+    photo: '/александра_прокшина.webp',
+    day: 5,
+    time: '17:40-18:40',
+    links: [
+      <TelegramIcon link='https://t.me/lineof' key='https://t.me/lineof' />,
+      <InstagramIcon
+        link='https://www.instagram.com/lineof/'
+        key='https://www.instagram.com/lineof/'
+      />,
+    ],
+  },
+  {
+    id: 12,
+    name: 'Татьяна Еремина',
+    position: 'Центр экспертизы развития IT специалиста, Сибур диджитал',
+    presentationType: 'воркшоп',
+    presentationName: 'Создаём свой центр обучения ИТ срециалистов',
+    photo: '/татьяна_еремина.webp',
+    day: 5,
+    time: '13:00-15:00',
+    links: [],
+  },
+  {
     id: 8,
     name: 'Анна Ширяева',
     position: 'Фронтенд-разработчик, живущий жизнью человек, Сибур диджитал',
@@ -127,30 +157,7 @@ const program = [
       />,
     ],
   },
-  {
-    id: 10,
-    name: 'Антон Егорушков',
-    position: 'Teamlead devops, Magnit tech',
-    presentationType: 'доклад',
-    presentationName: 'Инфраструктура как код',
-    photo: '/антон_егорушков.webp',
-    day: 6,
-    time: '16:40-17:40',
-    links: [
-      <TelegramIcon link='https://t.me/tozxspb' key='https://t.me/tozxspb' />,
-    ],
-  },
-  {
-    id: 9,
-    name: 'Андрей Шубин',
-    position: 'Старший разработчик, Яндекс',
-    presentationType: 'доклад',
-    presentationName: 'ML в электронной коммерции. Оно вам надо?',
-    photo: '/андрей_шубин.webp',
-    day: 6,
-    time: '13:40-14:40',
-    links: [],
-  },
+
   {
     id: 7,
     name: 'Павел Соколов',
@@ -165,6 +172,43 @@ const program = [
         link='https://t.me/sokolovpss'
         key='https://t.me/sokolovpss'
       />,
+    ],
+  },
+  {
+    id: 9,
+    name: 'Андрей Шубин',
+    position: 'Старший разработчик, Яндекс',
+    presentationType: 'доклад',
+    presentationName: 'ML в электронной коммерции. Оно вам надо?',
+    photo: '/андрей_шубин.webp',
+    day: 6,
+    time: '13:40-14:40',
+    links: [
+      <VkIcon link='https://vk.com/ogursan' key='https://vk.com/ogursan' />,
+    ],
+  },
+  {
+    id: 12,
+    name: 'Татьяна Еремина',
+    position: 'Центр экспертизы развития IT специалиста, Сибур диджитал',
+    presentationType: 'доклад',
+    presentationName: 'Как мы развиваем Айтишников',
+    photo: '/татьяна_еремина.webp',
+    day: 6,
+    time: '15:20-16:20',
+    links: [],
+  },
+  {
+    id: 10,
+    name: 'Антон Егорушков',
+    position: 'Teamlead devops, Magnit tech',
+    presentationType: 'доклад',
+    presentationName: 'Инфраструктура как код',
+    photo: '/антон_егорушков.webp',
+    day: 6,
+    time: '16:40-17:40',
+    links: [
+      <TelegramIcon link='https://t.me/tozxspb' key='https://t.me/tozxspb' />,
     ],
   },
   {
