@@ -24,3 +24,6 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: ${{ secrets.DOCKER_HUB_USERNAME }}/yamal.dev.conf:latest
+          script:
+            export DATABASE_URL=${{ secrets.DATABASE_URL }}
+

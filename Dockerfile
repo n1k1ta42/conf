@@ -5,8 +5,6 @@ WORKDIR /app
 COPY package.json .
 COPY package-lock.json .
 
-ENV DATABASE_URL="{$DATA_URL}"
-
 RUN npm ci
 
 COPY . .
