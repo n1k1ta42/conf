@@ -27,7 +27,9 @@ const Form = () => {
     setIsLoading(true)
     try {
       const res = await axios.post('/api/register', data)
-      toast.success(res.data.message)
+      toast.success(res.data.message, {
+        duration: 10000,
+      })
       reset()
     } catch (e: any) {
       toast.error(e.response.data.message)
