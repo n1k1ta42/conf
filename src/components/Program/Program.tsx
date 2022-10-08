@@ -51,7 +51,7 @@ const program = [
     ],
   },
   {
-    id: 4,
+    id: 3,
     name: 'Андрей Смирнов',
     position: 'Руководитель управления клиентской разработки, X5 Group',
     presentationType: 'доклад',
@@ -68,7 +68,7 @@ const program = [
     ],
   },
   {
-    id: 5,
+    id: 4,
     name: 'Надя Крутикова',
     position: 'Карьерный коуч, Elbrus bootcamp',
     presentationType: 'доклад',
@@ -88,7 +88,7 @@ const program = [
     ],
   },
   {
-    id: 6,
+    id: 5,
     name: 'Семён Левенсон',
     position: 'Руководитель группы, Дзен',
     presentationType: 'доклад',
@@ -108,7 +108,7 @@ const program = [
     ],
   },
   {
-    id: 11,
+    id: 6,
     name: 'Александра Прокшина',
     position: 'Руководитель разработки, ARTW',
     presentationType: 'доклад',
@@ -126,11 +126,11 @@ const program = [
     ],
   },
   {
-    id: 12,
+    id: 7,
     name: 'Татьяна Еремина',
     position: 'Центр экспертизы развития IT специалиста, СИБУР ДИДЖИТАЛ',
     presentationType: 'воркшоп',
-    presentationName: 'Создаём свой центр обучения ИТ срециалистов',
+    presentationName: 'Создаём свой центр обучения ИТ специалистов',
     photo: '/татьяна_еремина.webp',
     day: 5,
     time: '13:00-15:00',
@@ -159,7 +159,7 @@ const program = [
   },
 
   {
-    id: 7,
+    id: 9,
     name: 'Павел Соколов',
     position: 'Продуктовый дизайнер, СИБУР ДИДЖИТАЛ',
     presentationType: 'доклад',
@@ -175,7 +175,7 @@ const program = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     name: 'Андрей Шубин',
     position: 'Старший разработчик, Яндекс',
     presentationType: 'доклад',
@@ -188,7 +188,7 @@ const program = [
     ],
   },
   {
-    id: 12,
+    id: 11,
     name: 'Татьяна Еремина',
     position: 'Центр экспертизы развития IT специалиста, СИБУР ДИДЖИТАЛ',
     presentationType: 'доклад',
@@ -199,7 +199,7 @@ const program = [
     links: [],
   },
   {
-    id: 10,
+    id: 12,
     name: 'Антон Егорушков',
     position: 'Teamlead devops, Magnit tech',
     presentationType: 'доклад',
@@ -212,7 +212,7 @@ const program = [
     ],
   },
   {
-    id: 3,
+    id: 13,
     name: 'Александр Смирнов',
     position: 'SCRUM-мастер, СИБУР ДИДЖИТАЛ',
     presentationType: 'воркшоп',
