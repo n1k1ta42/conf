@@ -6,6 +6,10 @@ import { Header } from '@/components/Header'
 
 import '@/styles/globals.css'
 
+import { version } from '../../package.json'
+
+console.log('version', version)
+
 function App({ Component, pageProps }: AppProps) {
   return (
     <>
