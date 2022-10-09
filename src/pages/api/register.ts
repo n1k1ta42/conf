@@ -1,8 +1,13 @@
 import { PrismaClient } from '@prisma/client'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import nodemailer from 'nodemailer'
+import { Telegraf } from 'telegraf'
 
 const prisma = new PrismaClient()
+const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN || '')
+
+process.once('SIGINT', () => bot.stop('SIGINT'))
+process.once('SIGTERM', () => bot.stop('SIGTERM'))
 
 export default async function handler(
   req: NextApiRequest,
@@ -45,6 +50,13 @@ export default async function handler(
 
 `, // html body
       })
+
+    const users = await prisma.user.findMany()
+
+    await bot.telegram.sendMessage(
+      process.env.TELEGRAM_CHAT_ID || '',
+      `Новая регистрация на конфу ${newUser.name} ${newUser.surname}.\n\nВсего уже зарегалось ${users.length} человек`,
+    )
 
     res.status(201).json({
       message:
