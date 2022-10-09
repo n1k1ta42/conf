@@ -40,15 +40,10 @@ export default async function handler(
 
     if (newUser)
       await transport.sendMail({
-        from: 'no-replay@yamal.dev', // sender address
-        to: data.email, // list of receivers
-        subject: 'Подтверждение регистрации', // Subject line
-        html: `
-<p style="font-size: 20px">Вы успешно зарегистрировались на мероприятие. Чтобы нам знать что почта ваша, пожалуйста подтвердите ее.</p> 
-<br>
-<a href="https://conf.yamal.dev/api/email?id=${newUser.id}">Подтвердить почту</a>
-
-`, // html body
+        from: 'no-replay@yamal.dev',
+        to: data.email,
+        subject: 'Подтверждение регистрации',
+        html: `<p style="font-size: 20px">Вы успешно зарегистрировались на мероприятие. Чтобы нам знать что почта ваша, пожалуйста подтвердите ее.</p> <br><a href="https://conf.yamal.dev/api/email?id=${newUser.id}">Подтвердить почту</a>`,
       })
 
     const users = await prisma.user.findMany()
