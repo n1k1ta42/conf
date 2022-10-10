@@ -137,6 +137,19 @@ const program = [
     links: [],
   },
   {
+    id: 15,
+    name: 'Антон Егорушков',
+    position: 'Teamlead devops, Magnit tech',
+    presentationType: 'воркшоп',
+    presentationName: 'IaC pipeline: семь раз упади, восемь раз поднимись',
+    photo: '/антон_егорушков.webp',
+    day: 5,
+    time: '16:00-18:00',
+    links: [
+      <TelegramIcon link='https://t.me/tozxspb' key='https://t.me/tozxspb' />,
+    ],
+  },
+  {
     id: 8,
     name: 'Анна Ширяева',
     position: 'Фронтенд-разработчик, живущий жизнью человек, СИБУР ДИДЖИТАЛ',
@@ -229,6 +242,19 @@ const program = [
         link='https://www.instagram.com/Greatload/'
         key='https://www.instagram.com/Greatload/'
       />,
+    ],
+  },
+  {
+    id: 14,
+    name: 'Дмитрий Кирильчик',
+    position: '',
+    presentationType: 'воркшоп',
+    presentationName: 'Програмируем устройство для умного дома',
+    photo: '/дмитрий_кирильчик.webp',
+    day: 6,
+    time: '16:00-18:00',
+    links: [
+      <TelegramIcon link='https://t.me/triengl' key='https://t.me/triengl' />,
     ],
   },
 ]
