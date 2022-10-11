@@ -11,4 +11,8 @@ export interface User {
   sphere?: string
   university?: string
   specialization?: string
+  isFree?: boolean
+  place?: string
+  registration?: boolean
+  activity?: string
 }

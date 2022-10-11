@@ -4,6 +4,7 @@ import Head from 'next/head'
 import { useState } from 'react'
 import { Controller, SubmitHandler, useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
+import { AiOutlineInfoCircle } from 'react-icons/ai'
 import PhoneInput from 'react-phone-input-2'
 
 import { User } from '@/domain/User'
@@ -188,26 +189,24 @@ const Form = () => {
               </label>
             </div>
 
-            {watch('role') === 'student' && (
+            {watch('role') === 'student' ? (
               <>
-                <>
-                  <textarea
-                    disabled={isLoading}
-                    className='textarea'
-                    placeholder='Где вы учитесь?'
-                    {...register('university')}
-                  />
-                  <textarea
-                    disabled={isLoading}
-                    className='textarea'
-                    placeholder='Какая у вас специальность?'
-                    {...register('specialization')}
-                  />
-                </>
+                <textarea
+                  disabled={isLoading}
+                  className='textarea'
+                  placeholder='Где вы учитесь?'
+                  {...register('university')}
+                />
+                <textarea
+                  disabled={isLoading}
+                  className='textarea'
+                  placeholder='Какая у вас специальность?'
+                  {...register('specialization')}
+                />
               </>
-            )}
+            ) : null}
 
-            {watch('role') === 'worker' && (
+            {watch('role') === 'worker' ? (
               <>
                 <textarea
                   disabled={isLoading}
@@ -228,9 +227,9 @@ const Form = () => {
                   {...register('stack')}
                 />
               </>
-            )}
+            ) : null}
 
-            {watch('role') === 'other' && (
+            {watch('role') === 'other' ? (
               <>
                 <textarea
                   disabled={isLoading}
@@ -239,7 +238,51 @@ const Form = () => {
                   {...register('sphere')}
                 />
               </>
-            )}
+            ) : null}
+
+            <div className='divider' />
+
+            <label className='flex gap-4'>
+              <input
+                disabled={isLoading}
+                type='checkbox'
+                className='checkbox-secondary checkbox'
+                {...register('isFree')}
+              />
+              Хочу бесплатный проезд и проживание
+            </label>
+
+            {watch('isFree') ? (
+              <>
+                <label className='flex gap-4'>
+                  <input
+                    disabled={isLoading}
+                    type='checkbox'
+                    className='checkbox-secondary checkbox'
+                    {...register('registration')}
+                  />
+                  Есть ямальская прописка?
+                </label>
+                <textarea
+                  disabled={isLoading}
+                  className='textarea'
+                  placeholder='Место проживания?'
+                  {...register('place')}
+                />
+                <textarea
+                  disabled={isLoading}
+                  className='textarea'
+                  placeholder='Место учебы / работы?'
+                  {...register('activity')}
+                />
+                <div className='flex items-center gap-1'>
+                  <AiOutlineInfoCircle className='text-sm text-green-500' />
+                  <p className='text-sm text-slate-500'>
+                    Если ты попадешь в число счастливчиков с тобой связуться
+                  </p>
+                </div>
+              </>
+            ) : null}
 
             <div className='divider' />
 

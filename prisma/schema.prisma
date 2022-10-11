@@ -25,4 +25,8 @@ model User {
   sphere           String?
   university       String?
   specialization   String?
+  isFree           Boolean?
+  place            String?
+  registration     Boolean?
+  activity         String?
 }

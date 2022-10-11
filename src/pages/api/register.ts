@@ -39,19 +39,21 @@ export default async function handler(
     })
 
     if (newUser)
-      await transport.sendMail({
-        from: 'no-replay@yamal.dev',
-        to: data.email,
-        subject: 'Подтверждение регистрации',
-        html: `<p style="font-size: 20px">Вы успешно зарегистрировались на мероприятие. Чтобы нам знать что почта ваша, пожалуйста подтвердите ее.</p> <br><a href="https://conf.yamal.dev/api/email?id=${newUser.id}">Подтвердить почту</a>`,
-      })
+      process.env.NODE_ENV !== 'development' &&
+        (await transport.sendMail({
+          from: 'no-replay@yamal.dev',
+          to: data.email,
+          subject: 'Подтверждение регистрации',
+          html: `<p style="font-size: 20px">Вы успешно зарегистрировались на мероприятие. Чтобы нам знать что почта ваша, пожалуйста подтвердите ее.</p> <br><a href="https://conf.yamal.dev/api/email?id=${newUser.id}">Подтвердить почту</a>`,
+        }))
 
     const users = await prisma.user.findMany()
 
-    await bot.telegram.sendMessage(
-      process.env.TELEGRAM_CHAT_ID || '',
-      `Новая регистрация на конфу ${newUser.name} ${newUser.surname}.\n\nВсего уже зарегалось ${users.length} человек`,
-    )
+    process.env.NODE_ENV !== 'development' &&
+      (await bot.telegram.sendMessage(
+        process.env.TELEGRAM_CHAT_ID || '',
+        `Новая регистрация на конфу ${newUser.name} ${newUser.surname}.\n\nВсего уже зарегалось ${users.length} человек`,
+      ))
 
     res.status(201).json({
       message:
