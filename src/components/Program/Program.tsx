@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { BiTimeFive } from 'react-icons/bi'
 import { MdDateRange } from 'react-icons/md'
 
+import { FbIcon } from '@/components/Program/FbIcon'
 import { GithubIcon } from '@/components/Program/GithubIcon'
 import { InstagramIcon } from '@/components/Program/InstagramIcon'
 import { LinkedinIcon } from '@/components/Program/LinkedinIcon'
@@ -11,6 +12,7 @@ import { MailIcon } from '@/components/Program/MailIcon'
 import { TelegramIcon } from '@/components/Program/TelegramIcon'
 import { TwitterIcon } from '@/components/Program/TwitterIcon'
 import { VkIcon } from '@/components/Program/VkIcon'
+import { YoutubeIcon } from '@/components/Program/YoutubeIcon'
 
 const program = [
   {
@@ -126,6 +128,22 @@ const program = [
     ],
   },
   {
+    id: 16,
+    name: 'Никита Сидоров',
+    position: 'Ведущий разработчик, Яндекс',
+    presentationType: 'воркшоп',
+    presentationName: 'Инцидент менеджмент: Что? Где? Когда все сломалось?',
+    photo: '/никита_сидоров.webp',
+    day: 5,
+    time: '11:00-13:00',
+    links: [
+      <TelegramIcon
+        link='https://t.me/nickshevr'
+        key='https://t.me/nickshevr'
+      />,
+    ],
+  },
+  {
     id: 7,
     name: 'Татьяна Еремина',
     position: 'Центр экспертизы развития IT специалиста, СИБУР ДИДЖИТАЛ',
@@ -222,6 +240,35 @@ const program = [
     time: '16:40-17:40',
     links: [
       <TelegramIcon link='https://t.me/tozxspb' key='https://t.me/tozxspb' />,
+    ],
+  },
+  {
+    id: 17,
+    name: 'Петр Ермаков',
+    position: 'ML Brand Director, Яндекс',
+    presentationType: 'воркшоп',
+    presentationName:
+      'Выкачиваем вакансии из интернета и строим первую модель машинного обучения',
+    photo: '/петр_ермаков.webp',
+    day: 6,
+    time: '11:00-13:00',
+    links: [
+      <TelegramIcon
+        link='https://t.me/ermakovpetr_work'
+        key='https://t.me/ermakovpetr_work'
+      />,
+      <InstagramIcon
+        link='https://www.instagram.com/ermakov_petr/'
+        key='https://www.instagram.com/ermakov_petr/'
+      />,
+      <FbIcon
+        link='https://www.facebook.com/ermakovpetr/'
+        key='https://www.facebook.com/ermakovpetr/'
+      />,
+      <YoutubeIcon
+        link='https://www.youtube.com/c/datagym'
+        key='https://www.youtube.com/c/datagym'
+      />,
     ],
   },
   {
