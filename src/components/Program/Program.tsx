@@ -4,9 +4,7 @@ import { useState } from 'react'
 import { BiTimeFive } from 'react-icons/bi'
 import { MdDateRange } from 'react-icons/md'
 
-import { FbIcon } from '@/components/Program/FbIcon'
 import { GithubIcon } from '@/components/Program/GithubIcon'
-import { InstagramIcon } from '@/components/Program/InstagramIcon'
 import { LinkedinIcon } from '@/components/Program/LinkedinIcon'
 import { MailIcon } from '@/components/Program/MailIcon'
 import { TelegramIcon } from '@/components/Program/TelegramIcon'
@@ -46,10 +44,10 @@ const program = [
         link='https://t.me/AlexSibur'
         key='https://t.me/AlexSibur'
       />,
-      <InstagramIcon
-        link='https://www.instagram.com/Greatload/'
-        key='https://www.instagram.com/Greatload/'
-      />,
+      // <InstagramIcon
+      //   link='https://www.instagram.com/Greatload/'
+      //   key='https://www.instagram.com/Greatload/'
+      // />,
     ],
   },
   {
@@ -120,11 +118,11 @@ const program = [
     day: 5,
     time: '17:40-18:40',
     links: [
-      <TelegramIcon link='https://t.me/lineof' key='https://t.me/lineof' />,
-      <InstagramIcon
-        link='https://www.instagram.com/lineof/'
-        key='https://www.instagram.com/lineof/'
-      />,
+      // <TelegramIcon link='https://t.me/lineof' key='https://t.me/lineof' />,
+      // <InstagramIcon
+      //   link='https://www.instagram.com/lineof/'
+      //   key='https://www.instagram.com/lineof/'
+      // />,
     ],
   },
   {
@@ -257,14 +255,14 @@ const program = [
         link='https://t.me/ermakovpetr_work'
         key='https://t.me/ermakovpetr_work'
       />,
-      <InstagramIcon
-        link='https://www.instagram.com/ermakov_petr/'
-        key='https://www.instagram.com/ermakov_petr/'
-      />,
-      <FbIcon
-        link='https://www.facebook.com/ermakovpetr/'
-        key='https://www.facebook.com/ermakovpetr/'
-      />,
+      // <InstagramIcon
+      //   link='https://www.instagram.com/ermakov_petr/'
+      //   key='https://www.instagram.com/ermakov_petr/'
+      // />,
+      // <FbIcon
+      //   link='https://www.facebook.com/ermakovpetr/'
+      //   key='https://www.facebook.com/ermakovpetr/'
+      // />,
       <YoutubeIcon
         link='https://www.youtube.com/c/datagym'
         key='https://www.youtube.com/c/datagym'
@@ -285,10 +283,10 @@ const program = [
         link='https://t.me/AlexSibur'
         key='https://t.me/AlexSibur'
       />,
-      <InstagramIcon
-        link='https://www.instagram.com/Greatload/'
-        key='https://www.instagram.com/Greatload/'
-      />,
+      // <InstagramIcon
+      //   link='https://www.instagram.com/Greatload/'
+      //   key='https://www.instagram.com/Greatload/'
+      // />,
     ],
   },
   {
