@@ -252,18 +252,6 @@ const Form = () => {
               Хочу бесплатный проезд и проживание
             </label>
 
-            <div className='divider' />
-
-            <label className='flex gap-4'>
-              <input
-                disabled={isLoading}
-                type='checkbox'
-                className='checkbox-secondary checkbox'
-                {...register('isVegan')}
-              />
-              Я вегетарианец
-            </label>
-
             {watch('isFree') ? (
               <>
                 <label className='flex gap-4'>
@@ -295,6 +283,18 @@ const Form = () => {
                 </div>
               </>
             ) : null}
+
+            <div className='divider' />
+
+            <label className='flex gap-4'>
+              <input
+                disabled={isLoading}
+                type='checkbox'
+                className='checkbox-secondary checkbox'
+                {...register('isVegan')}
+              />
+              Я вегетарианец
+            </label>
 
             <div className='divider' />
 
