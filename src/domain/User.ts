@@ -15,4 +15,5 @@ export interface User {
   place?: string
   registration?: boolean
   activity?: string
+  isVegan?: boolean
 }

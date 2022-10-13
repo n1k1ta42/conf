@@ -29,4 +29,5 @@ model User {
   place            String?
   registration     Boolean?
   activity         String?
+  isVegan          Boolean?
 }
