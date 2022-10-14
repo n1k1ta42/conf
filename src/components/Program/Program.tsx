@@ -83,21 +83,17 @@ const program = [
   },
   {
     id: 5,
-    name: 'Семён Левенсон',
-    position: 'Руководитель группы, Дзен',
+    name: 'Павел Соколов',
+    position: 'Продуктовый дизайнер, СИБУР ДИДЖИТАЛ',
     presentationType: 'доклад',
-    presentationName: 'Про коммуникацию разработчиков и дизайнеров',
-    photo: '/семен_левенсон.webp',
+    presentationName: 'Рабочие процессы продуктового дизайнера',
+    photo: '/павел_соколов.webp',
     day: 5,
     time: '16:10-17:10',
     links: [
-      <TwitterIcon
-        link='https://twitter.com/sem_eleven'
-        key='https://twitter.com/sem_eleven'
-      />,
-      <GithubIcon
-        link='https://github.com/semeleven'
-        key='https://github.com/semeleven'
+      <TelegramIcon
+        link='https://t.me/sokolovpss'
+        key='https://t.me/sokolovpss'
       />,
     ],
   },
@@ -196,17 +192,21 @@ const program = [
   },
   {
     id: 12,
-    name: 'Павел Соколов',
-    position: 'Продуктовый дизайнер, СИБУР ДИДЖИТАЛ',
+    name: 'Семён Левенсон',
+    position: 'Руководитель группы, Дзен',
     presentationType: 'доклад',
-    presentationName: 'Рабочие процессы продуктового дизайнера',
-    photo: '/павел_соколов.webp',
+    presentationName: 'Про коммуникацию разработчиков и дизайнеров',
+    photo: '/семен_левенсон.webp',
     day: 6,
     time: '12:10-13:10',
     links: [
-      <TelegramIcon
-        link='https://t.me/sokolovpss'
-        key='https://t.me/sokolovpss'
+      <TwitterIcon
+        link='https://twitter.com/sem_eleven'
+        key='https://twitter.com/sem_eleven'
+      />,
+      <GithubIcon
+        link='https://github.com/semeleven'
+        key='https://github.com/semeleven'
       />,
     ],
   },
