@@ -116,7 +116,7 @@ export const Address = () => {
         ) : (
           <div className='order-1 lg:order-2'>
             <h1 className='text-xl font-bold lg:text-5xl'>
-              Арт-резеденция &quot;Полярис&quot;
+              Арт-резиденция &quot;Полярис&quot;
             </h1>
             <p className='flex gap-1 py-6'>
               <svg
