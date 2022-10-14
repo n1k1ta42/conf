@@ -4,6 +4,7 @@ import { useState } from 'react'
 import { BiTimeFive } from 'react-icons/bi'
 import { MdDateRange } from 'react-icons/md'
 
+import { BoostyIcon } from '@/components/Program/BoostyIcon'
 import { GithubIcon } from '@/components/Program/GithubIcon'
 import { LinkedinIcon } from '@/components/Program/LinkedinIcon'
 import { MailIcon } from '@/components/Program/MailIcon'
@@ -15,20 +16,22 @@ import { YoutubeIcon } from '@/components/Program/YoutubeIcon'
 const program = [
   {
     id: 1,
-    name: 'Саша Шинкевич',
-    position: 'Engineering Manager, Bravado',
+    name: 'Андрей Смирнов',
+    position: 'Руководитель управления клиентской разработки, X5 Group',
     presentationType: 'доклад',
-    presentationName: 'Необычные браузерные API',
-    photo: '/саша_шинкевич.webp',
+    presentationName: 'Как вырасти в IT и остаться человеком',
+    photo: '/андрей_смирнов.webp',
     day: 5,
-    time: '11:00-11:50',
+    time: '11:00-12:00',
     links: [
       <TwitterIcon
-        link='https://twitter.com/neesoglasnaja'
-        key='https://twitter.com/neesoglasnaja'
+        link='https://twitter.com/sandark7'
+        key='https://twitter.com/sandark7'
       />,
+      <TelegramIcon link='https://t.me/sandark' key='https://t.me/sandark' />,
     ],
   },
+
   {
     id: 2,
     name: 'Александр Смирнов',
@@ -38,7 +41,7 @@ const program = [
       'Что такое продуктовый подход на практике и  как он помогает в командной разработке',
     photo: '/александр_смирнов.webp',
     day: 5,
-    time: '12:20-13:20',
+    time: '12:10-13:10',
     links: [
       <TelegramIcon
         link='https://t.me/AlexSibur'
@@ -51,21 +54,15 @@ const program = [
     ],
   },
   {
-    id: 3,
-    name: 'Андрей Смирнов',
-    position: 'Руководитель управления клиентской разработки, X5 Group',
+    id: 314,
+    name: 'Татьяна Еремина',
+    position: 'Центр экспертизы развития IT специалиста, СИБУР ДИДЖИТАЛ',
     presentationType: 'доклад',
-    presentationName: 'Как вырасти в IT и остаться человеком',
-    photo: '/андрей_смирнов.webp',
+    presentationName: 'Как мы развиваем Айтишников',
+    photo: '/татьяна_еремина.webp',
     day: 5,
-    time: '13:40-14:40',
-    links: [
-      <TwitterIcon
-        link='https://twitter.com/sandark7'
-        key='https://twitter.com/sandark7'
-      />,
-      <TelegramIcon link='https://t.me/sandark' key='https://t.me/sandark' />,
-    ],
+    time: '13:20-14:20',
+    links: [],
   },
   {
     id: 4,
@@ -75,7 +72,7 @@ const program = [
     presentationName: 'Как войти в IT',
     photo: '/надя_крутикова.webp',
     day: 5,
-    time: '15:20-16:20',
+    time: '15:00-16:00',
     links: [
       <TelegramIcon
         link='https://t.me/krutikovanad'
@@ -95,15 +92,15 @@ const program = [
     presentationName: 'Про коммуникацию разработчиков и дизайнеров',
     photo: '/семен_левенсон.webp',
     day: 5,
-    time: '16:40-17:40',
+    time: '16:10-17:10',
     links: [
       <TwitterIcon
         link='https://twitter.com/sem_eleven'
         key='https://twitter.com/sem_eleven'
       />,
       <GithubIcon
-        link='http://github.com/semeleven'
-        key='http://github.com/semeleven'
+        link='https://github.com/semeleven'
+        key='https://github.com/semeleven'
       />,
     ],
   },
@@ -116,7 +113,25 @@ const program = [
       'Выход из замкнутого круга - как bitrix-разработчику перейти на программирование на фреймворках',
     photo: '/александра_прокшина.webp',
     day: 5,
-    time: '17:40-18:40',
+    time: '17:20-18:20',
+    links: [
+      // <TelegramIcon link='https://t.me/lineof' key='https://t.me/lineof' />,
+      // <InstagramIcon
+      //   link='https://www.instagram.com/lineof/'
+      //   key='https://www.instagram.com/lineof/'
+      // />,
+    ],
+  },
+
+  {
+    id: 7,
+    name: 'Серёжа Попов',
+    position: 'HTML Academy, Лига А',
+    presentationType: 'доклад',
+    presentationName: 'Основы психологического здоровья в ИТ',
+    photo: '/сережа_попов.webp',
+    day: 5,
+    time: '18:30-19:30',
     links: [
       // <TelegramIcon link='https://t.me/lineof' key='https://t.me/lineof' />,
       // <InstagramIcon
@@ -126,7 +141,7 @@ const program = [
     ],
   },
   {
-    id: 16,
+    id: 8,
     name: 'Никита Сидоров',
     position: 'Ведущий разработчик, Яндекс',
     presentationType: 'воркшоп',
@@ -142,18 +157,20 @@ const program = [
     ],
   },
   {
-    id: 7,
-    name: 'Татьяна Еремина',
-    position: 'Центр экспертизы развития IT специалиста, СИБУР ДИДЖИТАЛ',
+    id: 9,
+    name: 'Дмитрий Кирильчик',
+    position: '',
     presentationType: 'воркшоп',
-    presentationName: 'Создаём свой центр обучения ИТ специалистов',
-    photo: '/татьяна_еремина.webp',
+    presentationName: 'Програмируем устройство для умного дома',
+    photo: '/дмитрий_кирильчик.webp',
     day: 5,
-    time: '13:00-15:00',
-    links: [],
+    time: '13:30-15:30',
+    links: [
+      <TelegramIcon link='https://t.me/triengl' key='https://t.me/triengl' />,
+    ],
   },
   {
-    id: 15,
+    id: 10,
     name: 'Антон Егорушков',
     position: 'Teamlead devops, Magnit tech',
     presentationType: 'воркшоп',
@@ -166,7 +183,65 @@ const program = [
     ],
   },
   {
-    id: 8,
+    id: 11,
+    name: 'Антон Егорушков',
+    position: 'Teamlead devops, Magnit tech',
+    presentationType: 'доклад',
+    presentationName: 'Инфраструктура как код',
+    photo: '/антон_егорушков.webp',
+    day: 6,
+    time: '11:00-12:00',
+    links: [
+      <TelegramIcon link='https://t.me/tozxspb' key='https://t.me/tozxspb' />,
+    ],
+  },
+  {
+    id: 12,
+    name: 'Павел Соколов',
+    position: 'Продуктовый дизайнер, СИБУР ДИДЖИТАЛ',
+    presentationType: 'доклад',
+    presentationName: 'Рабочие процессы продуктового дизайнера',
+    photo: '/павел_соколов.webp',
+    day: 6,
+    time: '12:10-13:10',
+    links: [
+      <TelegramIcon
+        link='https://t.me/sokolovpss'
+        key='https://t.me/sokolovpss'
+      />,
+    ],
+  },
+  {
+    id: 13,
+    name: 'Андрей Шубин',
+    position: 'Старший разработчик, Яндекс',
+    presentationType: 'доклад',
+    presentationName: 'ML в электронной коммерции. Оно вам надо?',
+    photo: '/андрей_шубин.webp',
+    day: 6,
+    time: '13:20-14:20',
+    links: [
+      <VkIcon link='https://vk.com/ogursan' key='https://vk.com/ogursan' />,
+    ],
+  },
+  {
+    id: 14,
+    name: 'Саша Шинкевич',
+    position: 'Engineering Manager, Bravado',
+    presentationType: 'доклад',
+    presentationName: 'Необычные браузерные API',
+    photo: '/саша_шинкевич.webp',
+    day: 6,
+    time: '15:00-16:00',
+    links: [
+      <TwitterIcon
+        link='https://twitter.com/neesoglasnaja'
+        key='https://twitter.com/neesoglasnaja'
+      />,
+    ],
+  },
+  {
+    id: 15,
     name: 'Анна Ширяева',
     position: 'Фронтенд-разработчик, живущий жизнью человек, СИБУР ДИДЖИТАЛ',
     presentationType: 'доклад',
@@ -174,7 +249,7 @@ const program = [
       'Зачем мы опустились так низко? И нужен ли компаниям свой low-code?',
     photo: '/анна_ширяева.webp',
     day: 6,
-    time: '11:00-12:00',
+    time: '16:10-17:10',
     links: [
       <TelegramIcon
         link='https://t.me/numbingmist'
@@ -186,58 +261,28 @@ const program = [
       />,
     ],
   },
-
   {
-    id: 9,
-    name: 'Павел Соколов',
-    position: 'Продуктовый дизайнер, СИБУР ДИДЖИТАЛ',
+    id: 16,
+    name: 'Антон Назаров',
+    position: 'Карьерный коуч',
     presentationType: 'доклад',
-    presentationName: 'Рабочие процессы продуктового дизайнера',
-    photo: '/павел_соколов.webp',
+    presentationName: 'Прикладная рациональность',
+    photo: '/антон_назаров.webp',
     day: 6,
-    time: '12:20-13:20',
+    time: '17:20-18:20',
     links: [
-      <TelegramIcon
-        link='https://t.me/sokolovpss'
-        key='https://t.me/sokolovpss'
+      <TwitterIcon
+        link='https://twitter.com/m0rtymerr/ '
+        key='https://twitter.com/m0rtymerr/ '
       />,
-    ],
-  },
-  {
-    id: 10,
-    name: 'Андрей Шубин',
-    position: 'Старший разработчик, Яндекс',
-    presentationType: 'доклад',
-    presentationName: 'ML в электронной коммерции. Оно вам надо?',
-    photo: '/андрей_шубин.webp',
-    day: 6,
-    time: '13:40-14:40',
-    links: [
-      <VkIcon link='https://vk.com/ogursan' key='https://vk.com/ogursan' />,
-    ],
-  },
-  {
-    id: 11,
-    name: 'Татьяна Еремина',
-    position: 'Центр экспертизы развития IT специалиста, СИБУР ДИДЖИТАЛ',
-    presentationType: 'доклад',
-    presentationName: 'Как мы развиваем Айтишников',
-    photo: '/татьяна_еремина.webp',
-    day: 6,
-    time: '15:20-16:20',
-    links: [],
-  },
-  {
-    id: 12,
-    name: 'Антон Егорушков',
-    position: 'Teamlead devops, Magnit tech',
-    presentationType: 'доклад',
-    presentationName: 'Инфраструктура как код',
-    photo: '/антон_егорушков.webp',
-    day: 6,
-    time: '16:40-17:40',
-    links: [
-      <TelegramIcon link='https://t.me/tozxspb' key='https://t.me/tozxspb' />,
+      <YoutubeIcon
+        link='https://www.youtube.com/c/AntonNazarov_m0rtymerr?app=desktop'
+        key='https://www.youtube.com/c/AntonNazarov_m0rtymerr?app=desktop'
+      />,
+      <BoostyIcon
+        link='https://boosty.to/m0rtymerr'
+        key='https://boosty.to/m0rtymerr'
+      />,
     ],
   },
   {
@@ -269,15 +314,27 @@ const program = [
       />,
     ],
   },
+
   {
-    id: 13,
+    id: 18,
+    name: 'Татьяна Еремина',
+    position: 'Центр экспертизы развития IT специалиста, СИБУР ДИДЖИТАЛ',
+    presentationType: 'воркшоп',
+    presentationName: 'Создаём свой центр обучения ИТ специалистов',
+    photo: '/татьяна_еремина.webp',
+    day: 6,
+    time: '13:30-15:30',
+    links: [],
+  },
+  {
+    id: 19,
     name: 'Александр Смирнов',
     position: 'SCRUM-мастер, СИБУР ДИДЖИТАЛ',
     presentationType: 'воркшоп',
     presentationName: 'Оценка задач в Story Points',
     photo: '/александр_смирнов.webp',
     day: 6,
-    time: '13:30-15:30',
+    time: '16:00-18:00',
     links: [
       <TelegramIcon
         link='https://t.me/AlexSibur'
@@ -287,19 +344,6 @@ const program = [
       //   link='https://www.instagram.com/Greatload/'
       //   key='https://www.instagram.com/Greatload/'
       // />,
-    ],
-  },
-  {
-    id: 14,
-    name: 'Дмитрий Кирильчик',
-    position: '',
-    presentationType: 'воркшоп',
-    presentationName: 'Програмируем устройство для умного дома',
-    photo: '/дмитрий_кирильчик.webp',
-    day: 6,
-    time: '16:00-18:00',
-    links: [
-      <TelegramIcon link='https://t.me/triengl' key='https://t.me/triengl' />,
     ],
   },
 ]
