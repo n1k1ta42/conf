@@ -31,30 +31,27 @@ const program = [
       <TelegramIcon link='https://t.me/sandark' key='https://t.me/sandark' />,
     ],
   },
-
   {
     id: 2,
-    name: 'Александр Смирнов',
-    position: 'SCRUM-мастер, СИБУР ДИДЖИТАЛ',
+    name: 'Александра Прокшина',
+    position: 'Руководитель разработки, ARTW',
     presentationType: 'доклад',
     presentationName:
-      'Что такое продуктовый подход на практике и  как он помогает в командной разработке',
-    photo: '/александр_смирнов.webp',
+      'Выход из замкнутого круга - как bitrix-разработчику перейти на программирование на фреймворках',
+    photo: '/александра_прокшина.webp',
     day: 5,
     time: '12:10-13:10',
     links: [
-      <TelegramIcon
-        link='https://t.me/AlexSibur'
-        key='https://t.me/AlexSibur'
-      />,
+      // <TelegramIcon link='https://t.me/lineof' key='https://t.me/lineof' />,
       // <InstagramIcon
-      //   link='https://www.instagram.com/Greatload/'
-      //   key='https://www.instagram.com/Greatload/'
+      //   link='https://www.instagram.com/lineof/'
+      //   key='https://www.instagram.com/lineof/'
       // />,
     ],
   },
+
   {
-    id: 314,
+    id: 3,
     name: 'Татьяна Еремина',
     position: 'Центр экспертизы развития IT специалиста, СИБУР ДИДЖИТАЛ',
     presentationType: 'доклад',
@@ -106,23 +103,25 @@ const program = [
   },
   {
     id: 6,
-    name: 'Александра Прокшина',
-    position: 'Руководитель разработки, ARTW',
+    name: 'Александр Смирнов',
+    position: 'SCRUM-мастер, СИБУР ДИДЖИТАЛ',
     presentationType: 'доклад',
     presentationName:
-      'Выход из замкнутого круга - как bitrix-разработчику перейти на программирование на фреймворках',
-    photo: '/александра_прокшина.webp',
+      'Что такое продуктовый подход на практике и  как он помогает в командной разработке',
+    photo: '/александр_смирнов.webp',
     day: 5,
     time: '17:20-18:20',
     links: [
-      // <TelegramIcon link='https://t.me/lineof' key='https://t.me/lineof' />,
+      <TelegramIcon
+        link='https://t.me/AlexSibur'
+        key='https://t.me/AlexSibur'
+      />,
       // <InstagramIcon
-      //   link='https://www.instagram.com/lineof/'
-      //   key='https://www.instagram.com/lineof/'
+      //   link='https://www.instagram.com/Greatload/'
+      //   key='https://www.instagram.com/Greatload/'
       // />,
     ],
   },
-
   {
     id: 7,
     name: 'Серёжа Попов',
