@@ -156,7 +156,7 @@ const program = [
     name: 'Дмитрий Кирильчик',
     position: '',
     presentationType: 'воркшоп',
-    presentationName: 'Програмируем устройство для умного дома',
+    presentationName: 'Программируем устройство для умного дома',
     photo: '/дмитрий_кирильчик.webp',
     day: 5,
     time: '13:30-15:30',
