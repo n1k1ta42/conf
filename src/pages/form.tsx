@@ -9,6 +9,8 @@ import PhoneInput from 'react-phone-input-2'
 
 import { User } from '@/domain/User'
 
+import { Footer } from '@/components/Footer'
+
 const Form = () => {
   const [isLoading, setIsLoading] = useState(false)
   const {
@@ -332,6 +334,7 @@ const Form = () => {
           </form>
         </div>
       </div>
+      <Footer />
     </>
   )
 }
