@@ -280,7 +280,7 @@ const Form = () => {
                 <div className='flex items-center gap-1'>
                   <AiOutlineInfoCircle className='text-sm text-green-500' />
                   <p className='text-sm text-slate-500'>
-                    Если ты попадешь в число счастливчиков с тобой связуться
+                    Если ты попадешь в число счастливчиков с тобой свяжутся
                   </p>
                 </div>
               </>
