@@ -83,20 +83,21 @@ const program = [
   },
   {
     id: 5,
-    name: 'Павел Соколов',
-    position: 'Продуктовый дизайнер, СИБУР ДИДЖИТАЛ',
+    name: 'Саша Шинкевич',
+    position: 'Engineering Manager, Bravado',
     presentationType: 'доклад',
-    presentationName: 'Рабочие процессы продуктового дизайнера',
-    photo: '/павел_соколов.webp',
+    presentationName: 'Необычные браузерные API',
+    photo: '/саша_шинкевич.webp',
     day: 5,
     time: '16:10-17:10',
     links: [
-      <TelegramIcon
-        link='https://t.me/sokolovpss'
-        key='https://t.me/sokolovpss'
+      <TwitterIcon
+        link='https://twitter.com/neesoglasnaja'
+        key='https://twitter.com/neesoglasnaja'
       />,
     ],
   },
+
   {
     id: 6,
     name: 'Александр Смирнов',
@@ -120,19 +121,18 @@ const program = [
   },
   {
     id: 7,
-    name: 'Серёжа Попов',
-    position: 'HTML Academy, Лига А',
+    name: 'Павел Соколов',
+    position: 'Продуктовый дизайнер, СИБУР ДИДЖИТАЛ',
     presentationType: 'доклад',
-    presentationName: 'Основы психологического здоровья в ИТ',
-    photo: '/сережа_попов.webp',
+    presentationName: 'Рабочие процессы продуктового дизайнера',
+    photo: '/павел_соколов.webp',
     day: 5,
     time: '18:30-19:30',
     links: [
-      // <TelegramIcon link='https://t.me/lineof' key='https://t.me/lineof' />,
-      // <InstagramIcon
-      //   link='https://www.instagram.com/lineof/'
-      //   key='https://www.instagram.com/lineof/'
-      // />,
+      <TelegramIcon
+        link='https://t.me/sokolovpss'
+        key='https://t.me/sokolovpss'
+      />,
     ],
   },
   {
@@ -225,18 +225,19 @@ const program = [
   },
   {
     id: 14,
-    name: 'Саша Шинкевич',
-    position: 'Engineering Manager, Bravado',
+    name: 'Серёжа Попов',
+    position: 'HTML Academy, Лига А',
     presentationType: 'доклад',
-    presentationName: 'Необычные браузерные API',
-    photo: '/саша_шинкевич.webp',
+    presentationName: 'Основы психологического здоровья в ИТ',
+    photo: '/сережа_попов.webp',
     day: 6,
     time: '15:00-16:00',
     links: [
-      <TwitterIcon
-        link='https://twitter.com/neesoglasnaja'
-        key='https://twitter.com/neesoglasnaja'
-      />,
+      // <TelegramIcon link='https://t.me/lineof' key='https://t.me/lineof' />,
+      // <InstagramIcon
+      //   link='https://www.instagram.com/lineof/'
+      //   key='https://www.instagram.com/lineof/'
+      // />,
     ],
   },
   {

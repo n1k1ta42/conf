@@ -4,7 +4,6 @@ import Head from 'next/head'
 import { useState } from 'react'
 import { Controller, SubmitHandler, useForm } from 'react-hook-form'
 import toast from 'react-hot-toast'
-import { AiOutlineInfoCircle } from 'react-icons/ai'
 import PhoneInput from 'react-phone-input-2'
 
 import { User } from '@/domain/User'
@@ -242,49 +241,49 @@ const Form = () => {
               </>
             ) : null}
 
-            <div className='divider' />
+            {/*<div className='divider' />*/}
 
-            <label className='flex gap-4'>
-              <input
-                disabled={isLoading}
-                type='checkbox'
-                className='checkbox-secondary checkbox'
-                {...register('isFree')}
-              />
-              Хочу бесплатный проезд и проживание
-            </label>
+            {/*<label className='flex gap-4'>*/}
+            {/*  <input*/}
+            {/*    disabled={isLoading}*/}
+            {/*    type='checkbox'*/}
+            {/*    className='checkbox-secondary checkbox'*/}
+            {/*    {...register('isFree')}*/}
+            {/*  />*/}
+            {/*  Хочу бесплатный проезд и проживание*/}
+            {/*</label>*/}
 
-            {watch('isFree') ? (
-              <>
-                <label className='flex gap-4'>
-                  <input
-                    disabled={isLoading}
-                    type='checkbox'
-                    className='checkbox-secondary checkbox'
-                    {...register('registration')}
-                  />
-                  Есть ямальская прописка?
-                </label>
-                <textarea
-                  disabled={isLoading}
-                  className='textarea'
-                  placeholder='Место проживания?'
-                  {...register('place')}
-                />
-                <textarea
-                  disabled={isLoading}
-                  className='textarea'
-                  placeholder='Место учебы / работы?'
-                  {...register('activity')}
-                />
-                <div className='flex items-center gap-1'>
-                  <AiOutlineInfoCircle className='text-sm text-green-500' />
-                  <p className='text-sm text-slate-500'>
-                    Если ты попадешь в число счастливчиков с тобой свяжутся
-                  </p>
-                </div>
-              </>
-            ) : null}
+            {/*{watch('isFree') ? (*/}
+            {/*  <>*/}
+            {/*    <label className='flex gap-4'>*/}
+            {/*      <input*/}
+            {/*        disabled={isLoading}*/}
+            {/*        type='checkbox'*/}
+            {/*        className='checkbox-secondary checkbox'*/}
+            {/*        {...register('registration')}*/}
+            {/*      />*/}
+            {/*      Есть ямальская прописка?*/}
+            {/*    </label>*/}
+            {/*    <textarea*/}
+            {/*      disabled={isLoading}*/}
+            {/*      className='textarea'*/}
+            {/*      placeholder='Место проживания?'*/}
+            {/*      {...register('place')}*/}
+            {/*    />*/}
+            {/*    <textarea*/}
+            {/*      disabled={isLoading}*/}
+            {/*      className='textarea'*/}
+            {/*      placeholder='Место учебы / работы?'*/}
+            {/*      {...register('activity')}*/}
+            {/*    />*/}
+            {/*    <div className='flex items-center gap-1'>*/}
+            {/*      <AiOutlineInfoCircle className='text-sm text-green-500' />*/}
+            {/*      <p className='text-sm text-slate-500'>*/}
+            {/*        Если ты попадешь в число счастливчиков с тобой свяжутся*/}
+            {/*      </p>*/}
+            {/*    </div>*/}
+            {/*  </>*/}
+            {/*) : null}*/}
 
             <div className='divider' />
 
