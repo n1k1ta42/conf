@@ -137,17 +137,30 @@ const program = [
   },
   {
     id: 8,
-    name: 'Никита Сидоров',
-    position: 'Ведущий разработчик, Яндекс',
+    name: 'Петр Ермаков',
+    position: 'ML Brand Director, Яндекс',
     presentationType: 'воркшоп',
-    presentationName: 'Инцидент менеджмент: Что? Где? Когда все сломалось?',
-    photo: '/никита_сидоров.webp',
+    presentationName:
+      'Выкачиваем вакансии из интернета и строим первую модель машинного обучения',
+    photo: '/петр_ермаков.webp',
     day: 5,
     time: '11:00-13:00',
     links: [
       <TelegramIcon
-        link='https://t.me/nickshevr'
-        key='https://t.me/nickshevr'
+        link='https://t.me/ermakovpetr_work'
+        key='https://t.me/ermakovpetr_work'
+      />,
+      // <InstagramIcon
+      //   link='https://www.instagram.com/ermakov_petr/'
+      //   key='https://www.instagram.com/ermakov_petr/'
+      // />,
+      // <FbIcon
+      //   link='https://www.facebook.com/ermakovpetr/'
+      //   key='https://www.facebook.com/ermakovpetr/'
+      // />,
+      <YoutubeIcon
+        link='https://www.youtube.com/c/datagym'
+        key='https://www.youtube.com/c/datagym'
       />,
     ],
   },
@@ -226,7 +239,7 @@ const program = [
   {
     id: 14,
     name: 'Серёжа Попов',
-    position: 'HTML Academy, Лига А',
+    position: '',
     presentationType: 'доклад',
     presentationName: 'Основы психологического здоровья в ИТ',
     photo: '/сережа_попов.webp',
@@ -286,34 +299,20 @@ const program = [
   },
   {
     id: 17,
-    name: 'Петр Ермаков',
-    position: 'ML Brand Director, Яндекс',
+    name: 'Никита Сидоров',
+    position: 'Ведущий разработчик, Яндекс',
     presentationType: 'воркшоп',
-    presentationName:
-      'Выкачиваем вакансии из интернета и строим первую модель машинного обучения',
-    photo: '/петр_ермаков.webp',
+    presentationName: 'Инцидент менеджмент: Что? Где? Когда все сломалось?',
+    photo: '/никита_сидоров.webp',
     day: 6,
     time: '11:00-13:00',
     links: [
       <TelegramIcon
-        link='https://t.me/ermakovpetr_work'
-        key='https://t.me/ermakovpetr_work'
-      />,
-      // <InstagramIcon
-      //   link='https://www.instagram.com/ermakov_petr/'
-      //   key='https://www.instagram.com/ermakov_petr/'
-      // />,
-      // <FbIcon
-      //   link='https://www.facebook.com/ermakovpetr/'
-      //   key='https://www.facebook.com/ermakovpetr/'
-      // />,
-      <YoutubeIcon
-        link='https://www.youtube.com/c/datagym'
-        key='https://www.youtube.com/c/datagym'
+        link='https://t.me/nickshevr'
+        key='https://t.me/nickshevr'
       />,
     ],
   },
-
   {
     id: 18,
     name: 'Татьяна Еремина',
