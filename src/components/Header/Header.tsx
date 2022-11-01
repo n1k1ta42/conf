@@ -15,7 +15,7 @@ export const Header = () => {
             Регламент
           </label>
         </div>
-        {router.asPath !== '/form' && (
+        {!(router.asPath === '/form' || router.asPath === '/check-in') && (
           <button
             className='btn-sm btn absolute right-0 hidden md:block'
             onClick={() => router.push('/form')}

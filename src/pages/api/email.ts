@@ -1,14 +1,12 @@
-import { PrismaClient } from '@prisma/client'
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-const prisma = new PrismaClient()
+import prisma from '@/utils/prisma'
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse,
 ) {
   if (req.method === 'GET') {
-    await prisma.$connect()
     const { id } = req.query
 
     if (typeof id === 'string') {
@@ -21,8 +19,6 @@ export default async function handler(
         },
       })
     }
-
-    await prisma.$disconnect()
 
     res.redirect('/email')
   }

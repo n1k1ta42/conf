@@ -30,4 +30,5 @@ model User {
   registration     Boolean?
   activity         String?
   isVegan          Boolean?
+  decision         String?
 }

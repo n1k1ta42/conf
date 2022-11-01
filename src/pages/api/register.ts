@@ -1,9 +1,9 @@
-import { PrismaClient } from '@prisma/client'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import nodemailer from 'nodemailer'
 import { Telegraf } from 'telegraf'
 
-const prisma = new PrismaClient()
+import prisma from '@/utils/prisma'
+
 const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN || '')
 
 process.once('SIGINT', () => bot.stop('SIGINT'))
@@ -14,7 +14,6 @@ export default async function handler(
   res: NextApiResponse,
 ) {
   if (req.method === 'POST') {
-    await prisma.$connect()
     const data = req.body
     const user = await prisma.user.findFirst({
       where: {
@@ -57,9 +56,7 @@ export default async function handler(
 
     res.status(201).json({
       message:
-        'Регистрация прошла успешно. Вам придет письмо для подтверждения почты.',
+        'Регистрация прошла успешно. Вам придет письмо для подтверждения почты',
     })
-
-    await prisma.$disconnect()
   }
 }
