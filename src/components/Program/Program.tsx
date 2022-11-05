@@ -19,7 +19,7 @@ const program = [
     name: 'Андрей Смирнов',
     position: 'Руководитель управления клиентской разработки, X5 Group',
     presentationType: 'доклад',
-    presentationName: 'Как вырасти в IT и остаться человеком',
+    presentationName: 'Высококонверсионные собеседования',
     photo: '/андрей_смирнов.webp',
     day: 5,
     time: '11:00-12:00',
@@ -299,18 +299,22 @@ const program = [
   },
   {
     id: 17,
-    name: 'Никита Сидоров',
-    position: 'Ведущий разработчик, Яндекс',
+    name: 'Александр Смирнов',
+    position: 'SCRUM-мастер, СИБУР ДИДЖИТАЛ',
     presentationType: 'воркшоп',
-    presentationName: 'Инцидент менеджмент: Что? Где? Когда все сломалось?',
-    photo: '/никита_сидоров.webp',
+    presentationName: 'Оценка задач в Story Points',
+    photo: '/александр_смирнов.webp',
     day: 6,
     time: '11:00-13:00',
     links: [
       <TelegramIcon
-        link='https://t.me/nickshevr'
-        key='https://t.me/nickshevr'
+        link='https://t.me/AlexSibur'
+        key='https://t.me/AlexSibur'
       />,
+      // <InstagramIcon
+      //   link='https://www.instagram.com/Greatload/'
+      //   key='https://www.instagram.com/Greatload/'
+      // />,
     ],
   },
   {
@@ -326,22 +330,18 @@ const program = [
   },
   {
     id: 19,
-    name: 'Александр Смирнов',
-    position: 'SCRUM-мастер, СИБУР ДИДЖИТАЛ',
+    name: 'Никита Сидоров',
+    position: 'Ведущий разработчик, Яндекс',
     presentationType: 'воркшоп',
-    presentationName: 'Оценка задач в Story Points',
-    photo: '/александр_смирнов.webp',
+    presentationName: 'Инцидент менеджмент: Что? Где? Когда все сломалось?',
+    photo: '/никита_сидоров.webp',
     day: 6,
     time: '16:00-18:00',
     links: [
       <TelegramIcon
-        link='https://t.me/AlexSibur'
-        key='https://t.me/AlexSibur'
+        link='https://t.me/nickshevr'
+        key='https://t.me/nickshevr'
       />,
-      // <InstagramIcon
-      //   link='https://www.instagram.com/Greatload/'
-      //   key='https://www.instagram.com/Greatload/'
-      // />,
     ],
   },
 ]
