@@ -121,6 +121,36 @@ export const Hero = () => {
             </p>
           )}
           {isDesktop ? (
+            <motion.p
+              initial='offscreen'
+              whileInView='onscreen'
+              viewport={{ once: true }}
+              variants={{
+                offscreen: {
+                  y: 300,
+                  opacity: 0,
+                },
+                onscreen: {
+                  y: 0,
+                  opacity: 1,
+                  transition: {
+                    type: 'spring',
+                    bounce: 0.4,
+                    duration: 0.8,
+                    delay: 0.2,
+                  },
+                },
+              }}
+              className='mb-5 text-[12px] md:text-[16px]'
+            >
+              Начало регистрации с 10:00
+            </motion.p>
+          ) : (
+            <p className='mb-5 text-[12px] md:text-[16px]'>
+              Начало регистрации с 10:00
+            </p>
+          )}
+          {isDesktop ? (
             <motion.button
               initial='offscreen'
               whileInView='onscreen'
