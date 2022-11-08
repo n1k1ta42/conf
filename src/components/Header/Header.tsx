@@ -15,14 +15,14 @@ export const Header = () => {
             Регламент
           </label>
         </div>
-        {!(router.asPath === '/form' || router.asPath === '/check-in') && (
-          <button
-            className='btn-sm btn absolute right-0 hidden md:block'
-            onClick={() => router.push('/form')}
-          >
-            Принять участие
-          </button>
-        )}
+        {/*{!(router.asPath === '/form' || router.asPath === '/check-in') && (*/}
+        {/*  <button*/}
+        {/*    className='btn-sm btn absolute right-0 hidden md:block'*/}
+        {/*    onClick={() => router.push('/form')}*/}
+        {/*  >*/}
+        {/*    Принять участие*/}
+        {/*  </button>*/}
+        {/*)}*/}
         <div className='dropdown-end dropdown absolute right-0 md:hidden'>
           <label tabIndex={0} className='btn-circle btn'>
             <svg

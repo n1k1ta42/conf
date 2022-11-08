@@ -150,35 +150,35 @@ export const Hero = () => {
               Начало регистрации с 10:00
             </p>
           )}
-          {isDesktop ? (
-            <motion.button
-              initial='offscreen'
-              whileInView='onscreen'
-              viewport={{ once: true }}
-              variants={{
-                offscreen: {
-                  opacity: 0,
-                },
-                onscreen: {
-                  opacity: 1,
-                  transition: {
-                    delay: 0.3,
-                  },
-                },
-              }}
-              className='btn-secondary btn'
-              onClick={() => router.push('/form')}
-            >
-              Регистрация
-            </motion.button>
-          ) : (
-            <button
-              className='btn-secondary btn'
-              onClick={() => router.push('/form')}
-            >
-              Регистрация
-            </button>
-          )}
+          {/*{isDesktop ? (*/}
+          {/*  <motion.button*/}
+          {/*    initial='offscreen'*/}
+          {/*    whileInView='onscreen'*/}
+          {/*    viewport={{ once: true }}*/}
+          {/*    variants={{*/}
+          {/*      offscreen: {*/}
+          {/*        opacity: 0,*/}
+          {/*      },*/}
+          {/*      onscreen: {*/}
+          {/*        opacity: 1,*/}
+          {/*        transition: {*/}
+          {/*          delay: 0.3,*/}
+          {/*        },*/}
+          {/*      },*/}
+          {/*    }}*/}
+          {/*    className='btn-secondary btn'*/}
+          {/*    onClick={() => router.push('/form')}*/}
+          {/*  >*/}
+          {/*    Регистрация*/}
+          {/*  </motion.button>*/}
+          {/*) : (*/}
+          {/*  <button*/}
+          {/*    className='btn-secondary btn'*/}
+          {/*    onClick={() => router.push('/form')}*/}
+          {/*  >*/}
+          {/*    Регистрация*/}
+          {/*  </button>*/}
+          {/*)}*/}
         </div>
       </div>
     </div>
